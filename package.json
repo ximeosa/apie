@@ -1,0 +1,27 @@
+{
+  "name": "imdb-api",
+  "version": "1.0.0",
+  "description": "A private Fastify-based API for scraping IMDb search results, usable from Node.js and Firebase web apps.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [
+    "imdb",
+    "scraper",
+    "fastify",
+    "api",
+    "nodejs"
+  ],
+  "author": "ximeosa",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cheerio": "^1.0.0-rc.12",
+    "fastify": "^4.24.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
