@@ -12,7 +12,7 @@ fastify.register(require('@fastify/cors'), {
 // Versioned API route: /v1/search
 fastify.register(async function (appV1) {
   appV1.get('/search', async (request, reply) => {
-    const { query, genre, year, page, media } = request.query;
+    const { query, genre, year, page, media, certificates } = request.query; // Added 'certificates'
 
     try {
       const results = await imdbScraper.search({
@@ -20,7 +20,8 @@ fastify.register(async function (appV1) {
         genre,
         year,
         page,
-        media: media === 'true'
+        media: media === 'true',
+        certificates // Pass 'certificates'
       });
       reply.send(results);
     } catch (err) {
